@@ -5,6 +5,9 @@ public class Semaphore {
 	public Semaphore(int S) {
 		s = S;
 	}
+	public int getS() {
+		return s;
+	}
 	public void wait(int S) {
 		while (s <= 0)
 			;
