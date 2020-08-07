@@ -5,15 +5,12 @@ public class Semaphore {
 	public Semaphore(int S) {
 		s = S;
 	}
-	public int getS() {
-		return s;
-	}
-	public void wait(int S) {
+	public void wait(Semaphore S) {
 		while (s <= 0)
 			;
 		s--;
 	}
-	public void signal() {
+	public void signal(Semaphore S) {
 		s++;
 	}
 }
