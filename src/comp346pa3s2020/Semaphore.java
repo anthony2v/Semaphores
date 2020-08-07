@@ -5,9 +5,12 @@ public class Semaphore {
 	public Semaphore(int S) {
 		s = S;
 	}
+	public int getS() {
+		return s;
+	}
 	public void wait(Semaphore S) {
 		while (s <= 0) {
-			;
+			Thread.yield();
 		}
 		s--;
 	}
