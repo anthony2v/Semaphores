@@ -6,11 +6,16 @@ public class Semaphore {
 		s = S;
 	}
 	public void wait(Semaphore S) {
-		while (s <= 0)
+		while (s <= 0) {
 			;
+		}
 		s--;
 	}
 	public void signal(Semaphore S) {
 		s++;
+	}
+	@Override
+	public String toString() {
+		return "[s=" + s + "]";
 	}
 }
