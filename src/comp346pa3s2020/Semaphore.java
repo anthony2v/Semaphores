@@ -1,7 +1,7 @@
 package comp346pa3s2020;
 
 public class Semaphore {
-	private int s = 0;
+	private volatile int s = 0;
 	public Semaphore(int S) {
 		s = S;
 	}
@@ -10,7 +10,7 @@ public class Semaphore {
 	}
 	public void wait(Semaphore S) {
 		while (s <= 0) {
-			Thread.yield();
+			;
 		}
 		s--;
 	}
