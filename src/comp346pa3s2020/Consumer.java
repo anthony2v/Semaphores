@@ -35,11 +35,11 @@ public class Consumer extends Thread {
 				mutex.signal(mutex);
 				empty.signal(empty);
 				System.out.println("DEBUG ::: CONSUMING " + next_consumed);
+				System.out.println("DEBUG ::: BUFFER: [" + buffer[0] + ", " + buffer[1] + ", " + buffer[2] + ", "
+						+ buffer[3] + ", " + buffer[4] + ", " + buffer[5] + ", "
+						+ buffer[6] + ", " + buffer[7] + ", " + buffer[8] + ", "
+						+ buffer[9] + "]");
 			}
-//			System.out.print("DEBUG ::: BUFFER: [");
-//			for (int element: buffer)
-//				System.out.print(element + " ");
-//			System.out.println("]");
 			System.out.println("DEBUG ::: MUTEX " + mutex + ", FULL " + full + ", EMPTY " + empty);
 		}
 	}

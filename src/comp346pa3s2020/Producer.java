@@ -34,13 +34,13 @@ public class Producer extends Thread {
 				index++;
 				if (index == buffer.length)
 					index = 0;
+				System.out.println("DEBUG ::: BUFFER: [" + buffer[0] + ", " + buffer[1] + ", " + buffer[2] + ", "
+						+ buffer[3] + ", " + buffer[4] + ", " + buffer[5] + ", " 
+						+ buffer[6] + ", " + buffer[7] + ", " + buffer[8] + ", "
+						+ buffer[9] + "]");
 				mutex.signal(mutex);
 				full.signal(full);
 			}
-//			System.out.print("DEBUG ::: BUFFER: [");
-//			for (int element: buffer)
-//				System.out.print(element + " ");
-//			System.out.println("]");
 			System.out.println("DEBUG ::: MUTEX " + mutex + ", FULL " + full + ", EMPTY " + empty);
 		}
 	}
